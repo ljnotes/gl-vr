@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Test WebGL</title>
+  </head>
+  <body>
+    <canvas width="800" height="600"></canvas>
+    <script>
+      window.onload = function() {
+          let canvas = document.querySelector('canvas');
+          let context = canvas.getContext('webgl2');
+          const isWebGL2 = !!context;
+          if(!isWebGL2) {
+            context = canvas.getContext('webgl') ||
+                      canvas.getContext('experimental-webgl');
+          }
+
+          if(!context) {
+            console.log(`Browser doesn't support Web GL`);
+          } else {
+            // Set clear color to red, fully opaque
+            context.clearColor(1, 0, 0, 1);
+            // Clear the color buffer with specified clear color
+            context.clear(context.COLOR_BUFFER_BIT);
+          }
+      }
+    </script>
+  </body>
+</html>

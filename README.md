@@ -1,6 +1,6 @@
 ## Overview
-This project aims to be a "one source of all" that has been learned through out my VR experiments.
+Graphics and VR experiments.
 
 ### VR using JavaScript
 
-- [Using JavaScript](./VR using JavaScript)
+- [Using WebGL](./WebGL)
