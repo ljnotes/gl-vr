@@ -6,14 +6,30 @@
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
   </head>
   <body>
+    <!-- Every object in an A-Frame is an entity.
+    An entity can contain other entities in an hierarchical manner.
+    This is called a Entity Component System -->
     <a-scene>
-      <a-triangle color="#7fb3d5" vertex-c="-2 1 -4"></a-triangle>
-      <a-box position="-0.997 0.385 -3.004" rotation="0 45 0" color="#7fb3d5" depth="1.5" height="0.5" width="0.5" material="" geometry=""></a-box>
-      <a-box position="-1.504 0.634 -4.231" rotation="0 45 0" color="#9b59b6" depth=".75" height="1" width="1.5" material="" geometry=""></a-box>
-      <a-box position="1.024 0.222 -4.235" rotation="0 45 0" color="#f1c40f" depth="0.5" height="0.25" width="0.6" material="color:#f1c40f" geometry=""></a-box>
-      <a-box position="-1.016 0.53 -5.05" rotation="0 45 0" color="#45b39d" material="" geometry="" depth="1" height=".2" width="0.25" scale="1 4.562 1.609"></a-box>
-      <a-box position="-0.314 0.537 -6.185" rotation="0 45 0" color="#e74c3c" material="" geometry="" scale="1 1 1.609"></a-box>
-      <a-box position="0.386 0.425 -4.623" rotation="0 45 0" color="#154360" depth="0.5" height="0.15" width="3.6" material="" geometry="" scale="1 4.861 1"></a-box>
+      <a-box id="box1" position="-0.997 0.385 -3.004" rotation="0 45 0" color="#7fb3d5" depth="1.5" height="0.5" width="0.5" material="" geometry="">
+        <a-animation attribute="position" from="0 0 0" to="-0.997 0.385 -3.004" dur="2000"></a-animation>
+      </a-box>
+      <a-box position="-1.504 0.634 -4.231" rotation="0 45 0" color="#9b59b6" depth=".75" height="1" width="1.5" material="" geometry="">
+        <a-animation attribute="position" from="0 0 0" to="-1.504 0.634 -4.231" dur="1000"></a-animation>
+      </a-box>
+      <a-box position="1.024 0.222 -4.235" rotation="0 45 0" color="#f1c40f" depth="0.5" height="0.25" width="0.6" material="color:#f1c40f" geometry="">
+        <a-animation attribute="position" from="0 0 0" to="1.024 0.222 -4.235" dur="1100"></a-animation>
+      </a-box>
+      <a-box position="-1.016 0.53 -5.05" rotation="0 45 0" color="#45b39d" material="" geometry="" depth="1" height=".2" width="0.25" scale="1 4.562 1.609">
+        <a-animation attribute="position" from="0 0 0" to="-1.016 0.53 -5.05" dur="600"></a-animation>
+      </a-box>
+      <!-- red -->
+      <a-box position="-0.314 0.537 -6.185" rotation="0 45 0" color="#e74c3c" material="" geometry="" scale="1 1 1.609">
+        <a-animation attribute="position" from="0 0 0" to="-0.314 0.537 -6.185" dur="300"></a-animation>
+      </a-box>
+      <!-- dark blue -->
+      <a-box position="0.386 0.425 -4.623" rotation="0 45 0" color="#154360" depth="0.5" height="0.15" width="3.6" material="" geometry="" scale="1 4.861 1">
+        <a-animation attribute="position" from="3 8 0" to="0.386 0.425 -4.623" dur="2200"></a-animation>
+      </a-box>
       <a-box position="-2.395 0.369 -4.802" rotation="0 45 0" color="#bfc9ca" height="0.5" material="" geometry=""></a-box>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#FFF" shadow></a-plane>
       <a-sky color="#FFF"></a-sky>
